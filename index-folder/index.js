@@ -11,7 +11,7 @@ const nextEvent = () => {
     } else {
         current = 0;
     }
-    $carousel.style.transform = `translateX(${current * -800}px)`;
+    $carousel.style.transform = `translateX(${current * -1200}px)`;
 };
 
 const prevEvent = () => {
@@ -20,7 +20,7 @@ const prevEvent = () => {
     } else {
         current = CAROUSEL_LENGTH;
     }
-    $carousel.style.transform = `translateX(${current * -800}px)`;
+    $carousel.style.transform = `translateX(${current * -1200}px)`;
 };
 
 $prevbutton.addEventListener("click", prevEvent);
