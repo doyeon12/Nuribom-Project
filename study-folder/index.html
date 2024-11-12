@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>사자성어 명언</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/nuribom2/index-folder/index.html"><h1>Idiom Tech</h1></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="selector-area">
+            <label for="idiomSelect">사자성어를 선택하세요:</label>
+            <select id="idiomSelect" onchange="showQuotes()">
+                <option value="">-- 선택 --</option>
+                <option value="불치하문 (不恥下問)">불치하문 (不恥下問)</option>
+                <option value="살신성인 (殺身成仁)">살신성인 (殺身成仁)</option>
+                <option value="심심상인 (心心相印)">심심상인 (心心相印)</option>
+                <option value="일취월장 (日就月將)">일취월장 (日就月將)</option>
+                <option value="과유불급 (過猶不及)">과유불급 (過猶不及)</option>
+                <option value="타산지석 (他山之石)">타산지석 (他山之石)</option>
+            </select>
+            
+        </div>
+
+        <div id="idiomInfo">
+            <h2 id="idiomName"></h2>
+            <p id="idiomDescription"></p>
+        </div>
+
+        <div class="image-display" id="imageDisplay"></div>
+
+        .
+
+        <div class="quote-display" id="quoteDisplay">
+            <p>관련 명언이 사진과 함께 여기에 표시됩니다.</p>
+        </div>
+    </main>
+</body>
+</html>
