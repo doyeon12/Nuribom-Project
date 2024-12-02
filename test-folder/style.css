@@ -4,13 +4,16 @@
     box-sizing: border-box;
     font-family: "맑은 고딕","Malgun Gothic",serif;
 }
-body {
-    background-color: #231942; 
-}
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #284b63;
 }
 
 li {
@@ -43,7 +46,7 @@ li {
     width: 600px;
     height: 700px;
     margin-top: 20px;
-    background-color: #8d99ae;
+    background-color: #284b63;
     padding: 10px;
     border-radius: 15px;
     color: #fff;
@@ -71,11 +74,12 @@ li {
 #quiz-options li {
     width: 500px;
     height: 50px;
-    background-color: #333;
+    background-color: #fff;
     color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
+    color: #111;
 }
 
 .btn-items {

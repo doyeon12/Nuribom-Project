@@ -31,11 +31,11 @@ function github(){
 }
 
 function instagram(){
-    window.open("https://www.instagram.com/");
+    window.open("https://www.instagram.com/eon.d06y/");
 }
 
 function facebook(){
-    window.open("https://www.facebook.com/");
+    window.open("https://www.facebook.com/profile.php?id=100033780793643");
 }
 
 const idioms2 = Array.from(document.querySelectorAll(".idiom-items2 > div")); // 두 번째 사자성어 항목 선택

@@ -6,7 +6,7 @@ const idioms = [
             "가장 현명한 사람은 질문을 두려워하지 않는 사람이다.",
             "-알베르트 아인슈타인-",
         ],
-        image: "/nuribom2/img/아인슈타인.jpeg"
+        image: "/img/아인슈타인.jpeg"
     },
     {
         idiom: "살신성인 (殺身成仁)",
@@ -15,7 +15,7 @@ const idioms = [
             "옳은 일을 위해 희생하는 것은 위대한 용기이다.",
             "-마하트마 간디-"
         ],
-        image: "/nuribom2/img/간디.jpg"
+        image: "/img/간디.jpg"
     },
     {
         idiom: "심심상인 (心心相印)",
@@ -24,7 +24,7 @@ const idioms = [
             "마음으로 이해하는 것이 진정한 이해다.",
             "-공자-"
         ],
-        image: "/nuribom2/img/공자.jpg"
+        image: "/img/공자.jpg"
     },
     {
         idiom: "일취월장 (日就月將)",
@@ -33,7 +33,7 @@ const idioms = [
             "끊임없이 노력하는 자가 성공을 거머쥔다.",
             "-토마스 에디슨-"
         ],
-        image: "/nuribom2/img/에디슨.webp"
+        image: "/img/에디슨.webp"
     },
     {
         idiom: "과유불급 (過猶不及)",
@@ -42,7 +42,7 @@ const idioms = [
             "균형을 유지하는 것은 모든 것의 핵심이다.",
             "-아리스토텔레스-"
         ],
-        image: "/nuribom2/img/아리스토텔레스.jpg"
+        image: "/img/아리스토텔레스.jpg"
     },
     {
         idiom: "타산지석 (他山之石)",
@@ -51,7 +51,7 @@ const idioms = [
             "다른 사람의 실수에서 배워라.",
             "-벤자민 프랭클린-"
         ],
-        image: "/nuribom2/img/프랭클린.jpg"
+        image: "/img/프랭클린.jpg"
     }
 ];
 
