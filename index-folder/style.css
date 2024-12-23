@@ -22,7 +22,7 @@ header {
     height: 100px;
     display: flex;
     color: #fff;
-    background-color: #284b63;
+    background-color: #343a40;
     color: #fff;
     z-index: 1;
     border-bottom: 1px solid;
@@ -118,7 +118,7 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #284b63;
+    background-color: #6c757d;
     font-size: 54px;
     overflow-y: scroll;
     color: #fff;
@@ -225,7 +225,7 @@ section nav button svg{
     width: 1200px;
     height: 400px;
     overflow-y: auto;
-    background-color: #284b63;
+    background-color: #6c757d;
 }
 
 .idiom-items2 > div {
@@ -245,7 +245,7 @@ footer {
     width: 100%;
     height: 100px;
     display: flex;
-    background-color: #284b63;
+    background-color: #343a40;
     color: #fff;
 }
 

@@ -23,7 +23,7 @@ function displayQuiz() {
     if (currentIdiomIndex >= idioms.length) {
         clearInterval(timerInterval); // 타이머 중지
         alert(`시험이 끝났습니다! 맞힌 개수: ${correctAnswersCount} / ${idioms.length}`);
-        window.location.href = '/nuribom2/index-folder/index.html';
+        window.location.href = '/index-folder/index.html';
         return;
     }
 

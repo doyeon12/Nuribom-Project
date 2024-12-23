@@ -1,4 +1,4 @@
-const CAROUSEL_LENGTH = document.querySelectorAll(".idiom-items > div").length - 1;
+    const CAROUSEL_LENGTH = document.querySelectorAll(".idiom-items > div").length - 1;
 let current = 0;
 
 const $carousel = document.querySelector(".idiom-items");
