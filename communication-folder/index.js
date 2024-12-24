@@ -27,6 +27,9 @@ function addComment() {
     }
 }
 
+// 게시물 추가 기능
+
+
 
 // 댓글 목록 불러오기
 function loadComments() {
@@ -148,3 +151,4 @@ function deleteCommentRecursive(comments, text) {
         return true;
     });
 }
+
