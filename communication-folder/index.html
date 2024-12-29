@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유저 커뮤니케이션</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
-    <title>유저 커뮤니케이션</title>
 </head>
 <body>
     <header>
@@ -15,12 +15,26 @@
     </header>
 
     <main>
+        <div class="post-section">
+            <h2>게시물 작성</h2>
+            <input type="text" id="postTitle" placeholder="제목을 입력하세요...">
+            <textarea id="postContent" placeholder="내용을 입력하세요..."></textarea>
+            <div class="image-upload">
+                <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event)">
+                <img id="imagePreview" class="image-preview">
+            </div>
+            <button onclick="addPost()">게시물 등록</button>
+
+            <h2>게시물 목록</h2>
+            <div id="postList"></div>
+        </div>
+
         <div class="comment-section">
-            <h2 class="com-head">댓글 작성</h2>
+            <h2>댓글 작성</h2>
             <textarea id="commentInput" placeholder="댓글을 입력하세요..."></textarea>
             <button onclick="addComment()">댓글 등록</button>
 
-            <h2 class="com-main">댓글 목록</h2>
+            <h2>댓글 목록</h2>
             <div id="commentList"></div>
         </div>
     </main>

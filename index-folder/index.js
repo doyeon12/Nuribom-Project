@@ -54,5 +54,5 @@ searchInput.addEventListener("input", () => {
             idiom.style.display = "none"; // 해당 항목 숨기기
         }
     });
+    
 });
-
