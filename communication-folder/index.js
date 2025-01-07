@@ -25,7 +25,8 @@ function addPost() {
         content: content,
         image: imagePreview.style.display !== 'none' ? imagePreview.src : null,
         date: new Date().toLocaleString(),
-        id: Date.now()
+        id: Date.now(),
+        comments: [] // 댓글 배열 추가
     };
 
     // 기존 게시물 데이터를 가져와 새로운 게시물 추가
@@ -50,6 +51,7 @@ function addPost() {
 function createPostElement(post) {
     const postDiv = document.createElement('div');
     postDiv.className = 'post';
+    postDiv.dataset.postId = post.id; // 게시물 ID 저장
     
     let imageHtml = '';
     if (post.image) {
@@ -61,25 +63,57 @@ function createPostElement(post) {
         <div class="post-content">${post.content}</div>
         ${imageHtml}
         <div class="post-date">${post.date}</div>
+        <div class="comments">
+            <div class="comment-input">
+                <input type="text" placeholder="댓글을 입력하세요" class="comment-text">
+                <button onclick="addComment(${post.id})">댓글 작성</button>
+            </div>
+            <div class="comment-list" id="commentList-${post.id}">
+                ${post.comments.map(comment => createCommentElement(comment).outerHTML).join('')}
+            </div>
+        </div>
     `;
     return postDiv;
 }
 
 // 댓글 관련 함수
-function addComment() {
-    const comment = document.getElementById('commentInput').value;
+function addComment(postId) {
+    const commentInput = document.querySelector(`[data-post-id="${postId}"] .comment-text`);
+    const comment = commentInput.value;
     
     if (!comment.trim()) {
         alert('댓글 내용을 입력해주세요.');
         return;
     }
 
-    const commentList = document.getElementById('commentList');
-    const commentElement = createCommentElement(comment);
-    commentList.insertBefore(commentElement, commentList.firstChild);
+    const newComment = {
+        content: comment,
+        date: new Date().toLocaleString(),
+        id: Date.now()
+    };
 
-    // 입력 필드 초기화
-    document.getElementById('commentInput').value = '';
+    // 로컬 스토리지에서 게시물 데이터 가져오기
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+    const postIndex = posts.findIndex(post => post.id === postId);
+    
+    if (postIndex !== -1) {
+        // 해당 게시물의 댓글 배열에 새 댓글 추가
+        if (!posts[postIndex].comments) {
+            posts[postIndex].comments = [];
+        }
+        posts[postIndex].comments.unshift(newComment);
+        
+        // 로컬 스토리지 업데이트
+        localStorage.setItem('posts', JSON.stringify(posts));
+
+        // 화면에 댓글 추가
+        const commentList = document.getElementById(`commentList-${postId}`);
+        const commentElement = createCommentElement(newComment);
+        commentList.insertBefore(commentElement, commentList.firstChild);
+
+        // 입력 필드 초기화
+        commentInput.value = '';
+    }
 }
 
 // 댓글 HTML 요소 생성 함수
@@ -87,8 +121,8 @@ function createCommentElement(comment) {
     const commentDiv = document.createElement('div');
     commentDiv.className = 'comment';
     commentDiv.innerHTML = `
-        <div class="comment-content">${comment}</div>
-        <div class="comment-date">${new Date().toLocaleString()}</div>
+        <div class="comment-content">${comment.content}</div>
+        <div class="comment-date">${comment.date}</div>
     `;
     return commentDiv;
 }
@@ -103,3 +137,4 @@ window.onload = function() {
         postList.appendChild(postElement);
     });
 }
+
